@@ -1,0 +1,2 @@
+# Practical-Web-Development-Course-using-php-sql
+This repo is about Practical Web Development Course I prepared to help beginners practice web development and teach them how to build a website conatins main database operations (CRUD: Create Read Update Delete), how to build safe login forms and add images and remove them using PHP &amp; MySql. Course link: https://www.youtube.com/watch?v=SEPyOJBKhaY&amp;list=PLPTmYkqRatzKlnAq_voZL7HtzufL2_7z0
