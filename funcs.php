@@ -26,7 +26,13 @@ function redirect ($url){
   header("LOCATION: " . $url);
 }
 
-//Show flash messages  
+//logout function
+function logout(){
+  session_destroy();
+  redirect("login.php");
+}
+
+//Show flash messages
 function flash_msg(){
   if(isset($_SESSION["message"])){
     alert($_SESSION["message"]);
