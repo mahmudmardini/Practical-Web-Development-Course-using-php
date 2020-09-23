@@ -27,7 +27,7 @@ flash_msg();
              <ul class="nav navbar-nav">
                <a href="index.php"><h2 class="brand">Web Development</h2></a>
                <li>
-                 <a href=""><br>Add</a>
+                 <a href="add.php"><br>Add</a>
                </li>
               <li>
                 <a href="profile.php"></br><?=$_SESSION["username"]?></a>
@@ -48,12 +48,24 @@ flash_msg();
 <div id="home-tiles" class="row">
 
  <div class="tiles" style="height: 350px; padding-bottom:30px;">
-   <img class="center" width="65%" height="100%" src="images/welcome.jpg"></img>
+   <img class="center" width="65%" height="100%" src="images/web_dev.jpg"></img>
    <span>Welcome!</span>
  </div>
 
+<?php
+$stmt = $pdo->query("SELECT title, image, image_id FROM images");
 
-
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+  echo '<div class="col-xm-12 col-sm-6 col-md-4">';
+    echo '<div class="tiles">';
+      echo '<img src="images/'.$row["image"].'" style="width:100%;height:100%;">';
+      echo '<span>'.$row["title"];
+      echo '<a href="delete_images.php?image_id='.$row["image_id"].'"> del</a>';
+      echo '</span>';
+    echo '</div>';
+  echo '</div>';
+}
+ ?>
  </div>
 </div>
   </body>
