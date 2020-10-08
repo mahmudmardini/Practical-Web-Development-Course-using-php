@@ -54,7 +54,7 @@ flash_msg();
             echo '<img src="images/'.$row["image"].'" style="width:100%;height:100%;">';
             echo '<span>'.$row["title"];
           if($_SESSION["user_id"] == $row["user_id"]){
-            echo '<a href="delete_images.php?image_id='.$row["image_id"].'"> del</a>';
+            echo '<a href="delete_images.php?src=images/'.$row["image"].'&image_id='.$row["image_id"].'"> del</a>';
           }
             echo '</span>';
             echo '</div>';
